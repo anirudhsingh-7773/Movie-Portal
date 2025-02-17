@@ -1,0 +1,9 @@
+uuid: 98e43e55-0c4f-4cd9-9c3a-c7eb1f94b9ea
+langcode: en
+status: true
+dependencies: {  }
+name: 'Movie Genre'
+vid: movie_genre
+description: 'Add genre of movies.'
+weight: 0
+new_revision: false

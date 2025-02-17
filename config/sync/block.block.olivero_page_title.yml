@@ -2,6 +2,8 @@ uuid: 9ab16744-0f63-4e4e-8334-e1d9467b39a1
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - olivero
 _core:
@@ -17,4 +19,8 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/news\r\n/home\r\n"

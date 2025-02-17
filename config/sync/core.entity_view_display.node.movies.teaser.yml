@@ -1,0 +1,140 @@
+uuid: 71988f3e-0c18-404a-b6c0-a80739d59dba
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.movies.field_genre_movie
+    - field.field.node.movies.field_links
+    - field.field.node.movies.field_movie_image
+    - field.field.node.movies.field_plot
+    - field.field.node.movies.field_release_date
+    - field.field.node.movies.field_reviews
+    - node.type.movies
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Upper
+          context_mapping: {  }
+        components:
+          bfa53581-9ff8-4b48-8f90-eed1ac793215:
+            uuid: bfa53581-9ff8-4b48-8f90-eed1ac793215
+            region: content
+            configuration:
+              id: 'field_block:node:movies:field_release_date'
+              label: 'Release Date'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: datetime_default
+                label: inline
+                settings:
+                  timezone_override: ''
+                  format_type: html_date
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: main
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          dca6d087-7ba5-4200-a924-39326fedf6b8:
+            uuid: dca6d087-7ba5-4200-a924-39326fedf6b8
+            region: first
+            configuration:
+              id: 'field_block:node:movies:field_movie_image'
+              label: 'Movie Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: 130_x_100
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          55397e3f-8f5f-4a24-a3d9-11f6a87b0dc5:
+            uuid: 55397e3f-8f5f-4a24-a3d9-11f6a87b0dc5
+            region: second
+            configuration:
+              id: 'field_block:node:movies:field_plot'
+              label: Plot
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: basic_string
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: link
+          context_mapping: {  }
+        components:
+          1bf4a842-13f3-417c-9142-08fcfdf0b197:
+            uuid: 1bf4a842-13f3-417c-9142-08fcfdf0b197
+            region: content
+            configuration:
+              id: 'field_block:node:movies:field_links'
+              label: Links
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: _blank
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.movies.teaser
+targetEntityType: node
+bundle: movies
+mode: teaser
+content: {  }
+hidden:
+  field_genre_movie: true
+  field_links: true
+  field_movie_image: true
+  field_plot: true
+  field_release_date: true
+  field_reviews: true
+  links: true

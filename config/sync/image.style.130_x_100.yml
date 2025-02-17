@@ -1,0 +1,14 @@
+uuid: a84c54c4-5cfa-4cb4-9891-86151ae23c91
+langcode: en
+status: true
+dependencies: {  }
+name: 130_x_100
+label: '130 x 100'
+effects:
+  475383ec-2f84-4c8b-94ed-bc6afbac6645:
+    uuid: 475383ec-2f84-4c8b-94ed-bc6afbac6645
+    id: image_resize
+    weight: 1
+    data:
+      width: 130
+      height: 100

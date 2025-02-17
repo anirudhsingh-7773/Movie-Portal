@@ -1,0 +1,30 @@
+uuid: 3195fdb9-1d95-4485-9940-e28b5f5ce79a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.lists.body
+    - field.field.node.lists.field_movies
+    - node.type.lists
+  module:
+    - text
+    - user
+id: node.lists.default
+targetEntityType: node
+bundle: lists
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_movies: true
